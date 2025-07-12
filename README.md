@@ -6,7 +6,7 @@
 
 ## 🚀 Live Demo
 
-[Try AttendEz Now](https://adapalabhargavakrishna.github.io/Web-Development/AttendEz/index.html)
+[Try AttendEz Now](https://adapalabhargavakrishna.github.io/AttendEz/index.html)
 
 ---
 
@@ -42,7 +42,7 @@
 
 1. **Clone the repository:**
 ```bash
-git clone https://github.com/AdapalaBhargavaKrishna/Web-Development.git
+git clone https://github.com/AdapalaBhargavaKrishna/AttendEz.git
 cd Web-Development/AttendEz
 ```
 
