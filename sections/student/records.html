@@ -1,0 +1,82 @@
+<div class="student-records">
+    <h1>Student Records</h1>
+    <div class="record-header">
+        <div class="record-slider"></div>
+        <button class="active" onclick="moveSlider(0, this)">Subject</button>
+        <button onclick="moveSlider(1, this)">CIE</button>
+    </div>
+    <div class="all-records">
+        <div class="subject-cie-section">
+            <div class="subject-records-dropdown">
+                <div>Select Category:</div>
+                <select id="subject-records-dropdown">
+                    <option value="">---Select Category---</option>
+                    <option value="Theory">Theory</option>
+                    <option value="Labs">Labs</option>
+                </select>
+                
+            </div>
+            
+            <div class="cie-table-section">
+
+                <div id="subject-cie-table" style="display: none;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Subjects</th>
+                                <th>Sliptest 1</th>
+                                <th>Sliptest 2</th>
+                                <th>Sliptest 3</th>
+                                <th>Avg (5)</th>
+                                <th>Assignmnt 1</th>
+                                <th>Assignmnt 2</th>
+                                <th>Avg (10)</th>
+                                <th>Mid 1</th>
+                                <th>Mid 2</th>
+                                <th>Avg (20)</th>
+                                <th>Attendance (5)</th>
+                                <th>CIE Total (40)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Subject rows inserted here -->
+                        </tbody>
+                    </table>
+                </div>
+            
+                
+                <div id="lab-cie-table" style="display: none;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Labs</th>
+                                <th>Internal 1</th>
+                                <th>Internal 2</th>
+                                <th>Internals Avg (20)</th>
+                                <th>Record (30)</th>
+                                <th>CIE Total (50)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Lab rows inserted here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+        </div>
+    
+        <div class="full-cie-table-section">
+            <table id="full-cie-table">
+                <thead>
+                    <!-- Header will be inserted dynamically -->
+                </thead>
+                <tbody>
+                    <!-- Body will be inserted dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+
+</div>

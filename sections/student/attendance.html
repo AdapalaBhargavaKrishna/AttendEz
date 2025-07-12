@@ -1,0 +1,139 @@
+<div class="attendance">
+  <h1>Attendance</h1>
+  <div class="total-attendance">
+      <h1 class="att-percentage">0%</h1>
+      <p class="att-message"></p>
+  </div>
+  <div class="subject-wise">
+    <div class="att-wise-heading">
+      <h2>Subject-Wise Attendance</h2>
+      <button onclick="showDateWise()">view Date-Wise</button>
+    </div>
+    <div class="subject-attendance">
+      <table class="subject-attendance-table">
+        <thead>
+            <tr>
+                <th>S.No</th>
+                <th>Subject</th>
+                <th>Classes Held</th>
+                <th>Classes Attended</th>
+                <th>Attendance %</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>PQT : Probability and Queueing Theory</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0%</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>DCCST : DC Circuits Sensors and Transducers</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0%</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>DBMS : Database Management Systems</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0%</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>DAA : Design and Analysis of Algorithms</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0%</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>EEA : Engineering Economics and Accountancy</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0%</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>ES : Environmental Science</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0%</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>PE - 1 : Professional Elective - 1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0%</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>DBMS Lab : Database Management Systems Lab</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0%</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>ALG Lab : Algorithms Lab</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0%</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>MP-I : Mini Project – I</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0%</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td>MENTORING : MENTORING</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0%</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td>Total</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0%</td>
+            </tr>
+        </tbody>
+    </table>
+      
+    </div>
+  </div>
+  <div class="date-wise">
+    <div class="att-wise-heading">
+      <h2>Date-Wise Attendance</h2>
+      <button onclick="showOverall()">view Overall Attendance</button>
+    </div>
+    <div class="date-wise-dropdown">
+      
+    <div class="date-select">
+      <label for="dateDropdown">Select Subject:</label>
+      <select id="dateDropdown">
+            <option value="">---Select date---</option>
+      </select>
+    </div>
+  </div>
+
+    <div class="date-attendance">
+      <table>
+        <tr>
+          <th>Date</th>
+          <th>Subject</th>
+          <th>Status</th>
+        </tr>
+      </table>
+    </div>
+    
+  </div>
+</div>

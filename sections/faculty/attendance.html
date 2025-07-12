@@ -1,0 +1,50 @@
+<h2>Attendance</h2>
+<p>Mark student attendance below.</p>
+<div class="Attendance-dropdown">
+
+    <div class="subject-dropdown">
+        <div>Select Subject:</div>
+        <select id="subject-dropdown">
+            <option value="">---Select Subject---</option>
+            <option value="PQT : Probability and Queueing Theory">PQT : Probability and Queueing Theory</option>
+            <option value="DCCST : DC Circuits Sensors and Transducers">DCCST : DC Circuits Sensors and Transducers</option>
+            <option value="DBMS : Database Management Systems">DBMS : Database Management Systems</option>
+            <option value="DAA : Design and Analysis of Algorithms">DAA : Design and Analysis of Algorithms</option>
+            <option value="EEA : Engineering Economics and Accountancy">EEA : Engineering Economics and Accountancy</option>
+            <option value="ES : Environmental Science">ES : Environmental Science</option>
+            <option value="PE - 1 : Professional Elective - 1">PE - 1 : Professional Elective - 1</option>
+            <option value="DBMS Lab : Database Management Systems Lab">DBMS Lab : Database Management Systems Lab</option>
+            <option value="ALG Lab : Algorithms Lab">ALG Lab : Algorithms Lab</option>
+            <option value="MP-I : Mini Project – I">MP-I : Mini Project – I</option>
+            <option value="MENTORING : MENTORING">MENTORING : MENTORING</option>
+        </select>
+    </div>
+    <div class="select-batch">
+        <button class="class-button" onclick="selectType('class')">Class</button>
+        <select id="batch-select" onchange="selectType('batch')">
+            <option value="">Select Batch</option>
+            <option value="Batch-1">Batch-1</option>
+            <option value="Batch-2">Batch-2</option>
+            <option value="Batch-3">Batch-3</option>
+        </select>
+    </div>
+</div>
+
+<div class="attendance-list">
+    <div class="swipe-absent">
+        <p>double click or leave to mark</p>
+        <b>"Absent"</b>
+    </div>
+    <div id="rollNumberContainer" class="roll-container">
+        <div class="roll-numbers" id="rollNumbers">
+
+        </div>
+    </div>
+    <div class="swipe-present">
+        <p>click to mark</p>
+        <b>"Present"</b>
+    </div>
+</div>
+<button onclick="finalizeAttendance()" class="confirm-btn">Confirm Attendance</button>
+<div id="absenteesList"></div>
+<button id="clear-button" class="clear-button" onclick="clearAttendance()" style="display: none;">Clear</button>

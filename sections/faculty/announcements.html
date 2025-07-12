@@ -1,0 +1,23 @@
+<h2>🔔 Announcements</h2>
+            <div class="select-sec-sub">
+                <h3>Section:</h3>
+                <input type="text" id="current-section" readonly/>
+                <h3>Select Subject:</h3>
+                <select id="subjectDropdown" onchange="togglePostButton()">
+                    <option value="">--Select Subject--</option>
+                    <option value="Probability and Queuing Theory">Probability and Queuing Theory</option>
+                    <option value="DC Circuits Sensors and Transducers">DC Circuits Sensors and Transducers</option>
+                    <option value="Engineering Economics and Accountancy">Engineering Economics and Accountancy</option>
+                    <option value="Environmental Science">Environmental Science</option>
+                    <option value="Professional Elective - 1">Professional Elective - 1</option>
+                    <option value="DBMS Lab">DBMS Lab</option>
+                    <option value="ALG Lab">ALG Lab</option>
+                    <option value="Mini Project - 1">Mini Project - 1</option>
+                    <option value="Everyone">Everyone</option>
+                </select>
+            </div>
+            
+                <textarea id="announcementInput" placeholder="Enter your announcement..." disabled></textarea>
+                <button id="postButton" onclick="addAnnouncement()" disabled>Post Announcement</button>
+            
+                <div id="announcementsList"></div>

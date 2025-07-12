@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Faculty Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+    <link rel="stylesheet" href="styles/faculty.css">
+</head>
+
+<body>
+    <div class="main">
+        <nav>
+            <div class="head">
+                <img class="ani" id="logo" src="assets/college.svg" alt="">
+                <img class="ani" id="menu-icon" src="assets/menu.svg" alt="" onclick="toggleSidebar()"
+                    style="display: none;">
+                <h1 id="heading" class="ani">Faculty Dashboard</h1>
+            </div>
+            <div class="nav-button">
+                <!-- <button class="ani" id="notification-btn" onclick="showSection('announcements')">Notifications</button> -->
+                <button class="ani" onclick="logout()">Logout</button>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="sidebar" id="sidebar">
+                <button class="ani2" onclick="showSection('attendance')">Attendance</button>
+                <button class="ani2" onclick="showSection('timetable')">Timetable</button>
+                <button class="ani2" onclick="showSection('records')">Student Records</button>
+                <button class="ani2" onclick="showSection('assignments')">Assignments</button>
+                <button class="ani2" onclick="showSection('announcements')">Announcements</button>
+                <button class="ani2" onclick="showSection('Fees')">Fees</button>
+            </div>
+            <div class="mainbar" id="mainbar">
+                <div class="maincontent">
+                    <h2>Welcome to the Faculty Dashboard</h2>
+                    <p>Select an option from the sidebar to view details.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="scripts/faculty.js"></script>
+
+</body>
+
+</html>

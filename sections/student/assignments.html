@@ -1,0 +1,33 @@
+<div class="assignments">
+    <h1 class="assignment-heading">Assignments</h1>
+    <div class="assignment-view">
+      <ul class="assignment-items">
+
+      </ul>
+  </div>
+  
+
+  <div class="assignment-details">
+    <div class="details-heading">
+        <h2>📜 Assignment Details</h2>
+        <button> 
+            <img src="assets/back.svg" alt=""> Back
+        </button>
+    </div>
+
+    <div id="assignment-info">
+        <div><h3>Title:</h3><p></p></div>
+        <div><h3>Description:</h3><p></p></div>
+        <div><h3>File:</h3><button class="view-file">View File</button></div>
+    </div>
+
+    <div class="upload-section">
+        <h3>📤 Submit Your Assignment</h3>
+        <input type="file" id="assignmentFile" accept="application/pdf" hidden>
+        <label for="assignmentFile" class="custom-file-upload">Choose File</label>
+        <span id="file-name">No file chosen</span>
+        <button class="submit-assignment" onclick="submitAssignment()">Submit</button>
+    </div>
+</div>
+
+  </div>

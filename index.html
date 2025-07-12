@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>College Management System Login</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #dbeafe, #fce7f3);
+            animation: fadeInBody 1s ease-in;
+        }
+
+        @keyframes fadeInBody {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            background: #fdf6ff;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+            animation: popUp 0.6s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+        @keyframes popUp {
+            0% {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 25vw;
+            height: 50vh;
+            padding: 10px;
+        }
+
+        h1 {
+            font-size: 26px;
+            color: #333;
+            margin-bottom: 25px;
+            animation: fadeSlide 0.6s ease-out forwards;
+            transform: translateY(20px);
+            opacity: 0;
+        }
+
+        #welcomeText {
+            text-align: center;
+        }
+
+        @keyframes fadeSlide {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .buttons.vertical {
+            flex-direction: column;
+        }
+
+        button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 15px;
+            width: 11rem;
+            transition: all 0.3s ease-in-out;
+            font-weight: 500;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .student-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .faculty-btn {
+            background-color: #2196F3;
+            color: white;
+        }
+
+        .right {
+            display: none;
+            width: 25vw;
+            height: 50vh;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .login-form {
+            display: none;
+            width: 220px;
+            text-align: center;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .login-form h2 {
+            color: #333;
+            margin-bottom: 16px;
+        }
+
+        .login-form input,
+        .section-select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            transition: all 0.3s ease;
+        }
+
+        .login-form input:focus,
+        .section-select:focus {
+            border-color: #4CAF50;
+            outline: none;
+            box-shadow: 0 0 6px rgba(76, 175, 80, 0.3);
+        }
+
+        .login-form button {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 15px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        #defaultPassword {
+            margin-top: 8px;
+            font-weight: 100;
+            font-size: small;
+            color: #282828;
+            user-select: text;
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                width: 90%;
+                flex-direction: column;
+                height: auto;
+                padding: 20px;
+            }
+
+            .left,
+            .right {
+                width: 100%;
+                height: auto;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(-60px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            .loginButton {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+            <h1 id="welcomeText">Welcome to Smart College Management System</h1>
+            <div class="buttons" id="buttons">
+                <button class="student-btn" onclick="showLogin('Student')">Login as Student</button>
+                <button class="faculty-btn" onclick="showLogin('Faculty')">Login as Faculty</button>
+            </div>
+        </div>
+
+        <div class="right" id="right">
+            <div class="login-form" id="loginForm">
+                <h2 id="formTitle">Login</h2>
+                <div id="inputField"></div>
+                <input type="password" id="password" placeholder="Enter Password (shown below)" required />
+                <div id="defaultPassword"></div>
+                <button class="loginButton" onclick="validateLogin()">Login</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showLogin(role) {
+            const buttons = document.getElementById("buttons");
+            const loginForm = document.getElementById("loginForm");
+            const right = document.getElementById("right");
+            const formTitle = document.getElementById("formTitle");
+            const inputField = document.getElementById("inputField");
+            const defaultPassword = document.getElementById("defaultPassword");
+
+            buttons.classList.add("vertical");
+            formTitle.innerText = `Welcome, ${role}`;
+            right.style.display = "flex";
+            loginForm.style.display = "block";
+            document.getElementById("password").value = "";
+
+            if (role === "Student") {
+                inputField.innerHTML = '<input type="text" id="username" placeholder="Student ID" value="160123737095" required />';
+                defaultPassword.innerText = "Default Password: Student ID (12 digits)";
+            } else {
+                inputField.innerHTML = `
+                    <select id="facultyDropdown" class="section-select" required>
+                        <option value="" disabled selected>Select Section</option>
+                        <option value="it1">IT 1</option>
+                        <option value="it2">IT 2</option>
+                        <option value="it3">IT 3</option>
+                    </select>`;
+                defaultPassword.innerText = "Default Password: Section name (e.g. it2)";
+            }
+        }
+
+        function validateLogin() {
+            const facultyDropdown = document.getElementById("facultyDropdown");
+            const usernameInput = document.getElementById("username");
+            const password = document.getElementById("password").value.trim();
+
+            if (facultyDropdown && facultyDropdown.value) {
+                const selectedSection = facultyDropdown.value.trim().toLowerCase();
+                if (password.toLowerCase() === selectedSection) {
+                    window.location.href = `faculty.html?section=${selectedSection}`;
+                } else {
+                    alert("Invalid Credentials");
+                }
+            } else if (usernameInput && usernameInput.value.length === 12) {
+                const username = usernameInput.value.trim();
+                if (password === username) {
+                    window.location.href = `student.html?rollNumber=${username}`;
+                } else {
+                    alert("Password must be exactly the Student ID (12 digits)");
+                }
+            } else {
+                alert("Invalid Credentials");
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+<div class="fees">
+    <h1 class="fees-title">Fees Section</h1>
+    <div class="fee-header">
+
+      <div class="select-fee">
+        <h4>Select Fee Type</h4>
+        <select id="fee-select" onchange="showFees(this.value)">
+          <option value="">View all</option>
+          <option value="college">College Fee</option>
+          <option value="transport">Transport Fee</option>
+          <option value="hostel">Hostel Fee</option>
+        </select>
+      </div>
+
+      <div class="receipt">
+        <h4>Receipt Date</h4>
+        <input type="date" id="receipt-date" readonly/>
+      </div>
+    </div>
+
+    <div class="fee-details">
+      <div class="fee-details-left">
+        <div class="fee-head-left">
+          <h3>Your Fee Details</h3>
+          <div class="fee-info">
+            <table class="fee-table">
+              <thead>
+                <tr>
+                  <th>Fee Type</th>
+                  <th>Amount (₹)</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr id="college-fee">
+                  <td>College Fee</td>
+                  <td></td>
+                  <td class="status"></td>
+                </tr>
+                <tr id="transport-fee">
+                  <td>Transport Fee</td>
+                  <td></td>
+                  <td class="status paid"></td>
+                </tr>
+                <tr id="hostel-fee">
+                  <td>Hostel Fee</td>
+                  <td></td>
+                  <td class="status unpaid"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+      <div class="fee-details-right">
+        <div class="fee-head-right">
+          <h3>Payment</h3>
+        
+        <select id="pay-options" onchange="showPaymodes()">
+          <option value="">Select Pay-Mode</option>
+          <option value="upi">UPI</option>
+          <option value="credit-card">Credit-card</option>
+        </select>
+      </div>
+        
+        <div id="upi" class="payment-method">
+          <p class="total-amount-upi">Total Amount Payable: <strong>₹163</strong></p>
+          <div class="willing-amount-upi">
+            Amount willing to pay ₹<input type="number" id="upi-willing-amount" min="1">
+          </div>
+          <img src="assets/upi.png" alt="UPI QR Code" class="scanner-image">
+          <button class="pay-btn" onclick="handleCustomPayment('upi')">Pay Now</button>
+        </div>
+
+        <div id="credit-card" class="payment-method">
+          <h3>Add Card</h3>
+          <div class="total-amount-div">  
+            <p class="total-amount-credit">Total Amount Payable: <strong>₹163</strong></p>
+            <div class="willing-amount-credit">
+              Amount willing to pay ₹<input type="number" id="credit-willing-amount" min="1">
+            </div>
+          </div>
+      
+          <div class="card-container">
+              <div class="input-group">
+                  <label for="card-number">Card Number</label>
+                  <input type="text" id="card-number" placeholder="Enter Card Number" maxlength="19" autocomplete="off">
+              </div>
+      
+              <div class="exp-cvv-flex">
+                  <div class="input-group">
+                      <label for="expiry">Expiry</label>
+                      <input type="text" id="expiry" placeholder="MM/YY" maxlength="5">
+                  </div>
+                  <div class="input-group">
+                      <label for="cvv">CVV</label>
+                      <input type="password" id="cvv" placeholder="***" maxlength="3">
+                  </div>
+              </div>
+      
+              <button class="pay-btn" onclick="handleCustomPayment('credit')">Pay Now</button>
+          </div>
+      </div>
+      
+      
+      </div>
+    </div>
+
+    <div class="confirm-payments">
+      <div class="total-fee"></div>
+      <div class="to-pay"></div>
+      <button class="proceed-payment" onclick="showPayments()">Proceed to Payment</button>
+    </div>
+  </div>

@@ -1,0 +1,33 @@
+<div id="assignments-section">
+    <h2>📂 Assignments</h2>
+
+    <div id="create-assignment">
+        <h2>Create New Assignment</h2>
+        <input type="text" id="assignmentTitle" placeholder="Enter Assignment Title">
+        <textarea id="assignmentDesc" placeholder="Enter Assignment Description"></textarea>
+        <input type="file" id="assignmentFile">
+        <button id="uploadAssignment" onclick="createAssignment()">Upload</button>
+    </div>
+
+    <div id="assignments-list">
+        <h2>Created Assignments</h2>
+        <ul id="assignmentItems"></ul>
+    </div>
+
+    <div id="assignment-details" style="display:none">
+        <div class="details-heading">
+            <h3>Assignment Details</h3>
+            <button onclick="assignmentBack()">back <img src="assets/back.svg" alt=""></button>
+        </div>
+        <div id="assignment-info"></div>
+        <div class="delete-assignments">
+            <p><b>Submitted By: </b><span id="submitted-count">0</span> Students</p>
+            <button onclick="deleteAssignment()">Delete</button>
+        </div>
+    </div>
+    <div class="assignments-submissions">
+        <ul id="submissions-list">
+            
+        </ul>
+    </div>
+</div>

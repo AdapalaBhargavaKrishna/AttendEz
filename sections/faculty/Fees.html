@@ -1,0 +1,44 @@
+<div class="Fee-Section">
+    <h1>Fee Section</h1>
+    <div id="roll-container" class="roll-grid"></div>
+    <div id="fee-details" class="fee-details hidden">
+        <div class="back-btn">
+            <button id="back-btn">Back<img src="../../assets/back.svg" alt=""></button>
+        </div>
+        <div class="fee-info">
+            <div class="fee-heading">
+                <h1>Fe details for Roll No: </h1>
+            </div>
+            <table class="fee-table">
+                <thead>
+                    <tr>
+                        <th>Fee Type</th>
+                        <th>Amount (₹)</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr id="college-fee">
+                        <td>College Fee</td>
+                        <td contenteditable="true">10</td>
+                        <td class="status paid">Paid</td>
+                    </tr>
+                    <tr id="transport-fee">
+                        <td>Transport Fee</td>
+                        <td contenteditable="true">0</td>
+                        <td class="status paid">Paid</td>
+                    </tr>
+                    <tr id="hostel-fee">
+                        <td>Hostel Fee</td>
+                        <td contenteditable="true">25000</td>
+                        <td class="status unpaid">Unpaid</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="save-fees">
+            <button onclick="saveFeeDetails()">Save</button>
+        </div>
+    </div>
+    
+</div>

@@ -1,0 +1,1304 @@
+/* <--------------------Toast--------------------> */
+
+.fee-toast-error {
+    width: 440px !important;
+    max-width: 90vw;
+    top: 55px !important;
+    background-color: #ed3d3d !important;
+    border-radius: 15px;
+}
+
+.fee-toast-success {
+    width: 400px !important;
+    max-width: 90vw;
+    top: 55px !important;
+    background-color: #3dc763 !important;
+    border-radius: 15px;
+}
+
+.assignment-toast{
+    max-width: 90vw;
+    top: 55px !important;
+    border-radius: 15px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centers everything inside */
+    gap: 10px;
+    /* Space between navbar and container */
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1rem;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+    border-radius: 5px;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 10px;
+}
+
+.nav-button {
+    margin: 0 10px;
+}
+
+.nav-button button {
+    background-color: rgb(40, 40, 40);
+    color: white;
+    padding: 0.7rem 1rem;
+    border-radius: 50px;
+    border: 2px solid white;
+}
+
+.nav-button button:hover {
+    background-color: white;
+    color: rgb(40, 40, 40);
+}
+
+.container {
+    display: flex;
+    width: 97vw;
+    height: 89vh;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+    min-width: 20%;
+    max-width: 80%;
+    height: 100%;
+    background-color: #333;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    overflow-y: auto;
+    transition: width 0.3s ease;
+
+}
+
+
+.sidebar button {
+    padding: 10px;
+    margin-top: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 70%;
+}
+
+.mainbar {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    transition: margin-left 0.3s ease;
+}
+
+.sidebar.active {
+    display: flex;
+}
+
+.mainbar.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.maincontent>h2 {
+    margin: 0;
+}
+
+.maincontent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 35px;
+}
+
+/* <---------------------Notification---------------------> */
+
+.popup {
+    position: fixed;
+    top: 4rem;
+    right: 8rem;
+    width: 40rem;
+    height: 35rem;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    overflow: auto;
+    scrollbar-width: none;
+    z-index: 100;
+  }
+  
+.hidden {
+    display: none;
+}
+
+  
+.popup-header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#close-popup{
+    padding: 10px;
+    border-radius: 50px;
+    width: 2.8rem;
+    border: none;
+    background-color: #333;
+}
+
+#close-popup:hover{
+    scale: 1.04;
+}
+
+.popup-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.popup-content p{
+    padding: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+
+}
+ 
+.popup-content div{
+    background-color: whitesmoke;
+    padding: 1rem;
+    border-radius: 10px;
+    border-left: 7px solid #4CAF50;
+}
+
+/* <---------------------Attendance---------------------> */
+
+.attendance {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.attendance>h1 {
+    margin: -10px 0 0 0;
+}
+
+.total-attendance {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.att-percentage {
+    margin: 0.6rem 0 0 0;
+}
+
+.att-message {
+    color: green;
+    margin-top: 0.7rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.subject-wise {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.att-wise-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+.att-wise-heading button {
+    padding: 10px;
+    margin-top: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.subject-attendance {
+    margin-top: 1rem;
+    width: 90%;
+    overflow-x: auto;
+}
+
+.subject-attendance table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.subject-attendance table th {
+    background-color: #527a58;
+    color: white;
+}
+
+.subject-attendance th,
+.subject-attendance td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.subject-attendance table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.subject-attendance table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.subject-attendance table td {
+    vertical-align: top;
+}
+
+.date-wise {
+    width: 100%;
+    display: none;
+    align-items: center;
+    flex-direction: column;
+}
+
+.date-wise-dropdown{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.date-select {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+    gap: 1rem;
+}
+
+.date-select select{
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.date-attendance {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.date-attendance table {
+    width: 90%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.date-attendance th,
+.date-attendance td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.date-attendance th {
+    background-color: #527a58;
+    color: white;
+}
+
+.date-attendance tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.date-attendance tr:hover {
+    background-color: #f1f1f1;
+}
+
+.present {
+    color: green;
+    font-weight: bold;
+}
+
+.absent {
+    color: red;
+    font-weight: bold;
+}
+
+/* <---------------------Timetable---------------------> */
+
+.student-timetable {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.student-timetable h2 {
+    color: #3b3b3b;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.student-timetable table {
+    width: 90%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+}
+
+.student-timetable th,
+.student-timetable td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.student-timetable thead th {
+    background: linear-gradient(45deg, #527a58, #2c3e50);
+    color: white;
+    font-weight: bold;
+}
+
+.student-timetable tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.student-timetable th:first-child {
+    background-color: #527a58;
+    color: white;
+    font-weight: bold;
+}
+
+/* <---------------------Assignment---------------------> */
+
+.assignment-heading {
+    text-align: center;
+    font-size: 2rem;
+    color: #2c3e50;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.assignment-view {
+    padding: 1rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.assignment-items {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.assignment-item {
+    background: #f7f7f7;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-left: 7px solid #4CAF50;
+    cursor: pointer;
+    width: 95%;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.assignment-item:hover {
+    background: #e0e0e0;
+    transform: translateX(5px) scale(1.02);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.assignment-details {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 95%;
+    padding: 20px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.details-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.details-heading h2 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.details-heading button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 15px;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.details-heading button:hover {
+    background: linear-gradient(45deg, #f56248, #ff416c);
+    scale: 1.01;
+}
+
+#assignment-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#assignment-info div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.1rem;
+}
+
+#assignment-info h3 {
+    color: #333;
+    margin: 0;
+}
+
+#assignment-info p {
+    color: #555;
+    font-weight: bold;
+    margin: 0;
+}
+
+.view-file {
+    background: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.view-file:hover {
+    background: #0056b3;
+    transform: scale(1.1);
+}
+
+
+.upload-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 1rem;
+    border-radius: 15px;
+    width: 91%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.upload-section h3 {
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.upload-section input {
+    padding: 10px;
+    border-radius: 8px;
+    border-left: 4px solid #007bff;
+    background: #f4f4f4;
+    width: 98%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.upload-section input:hover {
+    transform: translateX(5px);
+    background: rgb(224, 224, 224);
+}
+
+.submit-assignment {
+    margin-top: 10px;
+    padding: 12px 20px;
+    background: linear-gradient(45deg, #4CAF50, #2ECC71);
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 10%;
+    text-align: center;
+}
+
+.submit-assignment:hover {
+    background: linear-gradient(45deg, #2ECC71, #4CAF50);
+    transform: scale(1.02);
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 15px;
+    background: #007bff;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.custom-file-upload:hover {
+    background-color: #0075f3;
+    transform: scale(1.02);
+}
+
+#file-name {
+    display: block;
+    margin-top: 0.5rem;
+    color: #333;
+}
+
+/* <---------------------Announcements---------------------> */
+
+.announcements {
+    width: 95%;
+    margin: 0 auto 1rem auto;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.announcements h1 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.announcement-list {
+    display: flex;
+    flex-direction: column;
+    height: 75vh;
+    gap: 1rem;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.announce-card {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 7px solid #4CAF50;
+    margin-bottom: 15px;
+}
+
+.announce-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.announce-card h3 {
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.announce-card p {
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.announce-card small {
+    display: block;
+    text-align: left;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* <----------Student Records----------> */
+
+.record-header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background: #ddd;
+  border-radius: 2rem;
+  overflow: hidden;
+  width: 40%;
+  margin: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.record-header button {
+  flex: 1;
+  padding: 10px 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1rem;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+.record-header button.active {
+  color: #fff;
+}
+
+.record-header .record-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  background-color: #4CAF50;
+  border-radius: 2rem;
+  z-index: 0;
+  transition: transform 0.3s ease;
+}
+
+/* Main Content Scrollable */
+.all-records {
+  width: 100%;
+  margin-top: 1rem;
+  height: 69vh;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+
+.all-records::-webkit-scrollbar {
+  display: none;
+}
+
+.subject-records-dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-bottom: 1rem;
+}
+
+.subject-records-dropdown > div {
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.subject-records-dropdown select {
+  padding: 10px 15px;
+  margin-left: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  width: 17vw;
+}
+
+.cie-table-section {
+  margin-top: 1rem;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+#subject-cie-table table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  margin-bottom: 1rem;
+  table-layout: auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#subject-cie-table table, 
+#subject-cie-table th, 
+#subject-cie-table td {
+  border: 1px solid #ccc;
+}
+
+#subject-cie-table th, 
+#subject-cie-table td {
+  padding: 10px;
+  text-align: center;
+}
+
+#subject-cie-table thead th {
+  background-color: #8bda8d;
+  color: #000;
+}
+
+#subject-cie-table thead th:first-child {
+  border-top-left-radius: 10px;
+}
+
+#subject-cie-table thead th:last-child {
+  border-top-right-radius: 10px;
+}
+
+#subject-cie-table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+#subject-cie-table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+#lab-cie-table table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  margin-bottom: 1rem;
+  table-layout: auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#lab-cie-table table, 
+#lab-cie-table th, 
+#lab-cie-table td {
+  border: 1px solid #ccc;
+}
+
+#lab-cie-table th, 
+#lab-cie-table td {
+  padding: 10px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+#lab-cie-table thead th {
+  background-color: #8bda8d;
+  color: #000;
+}
+
+#lab-cie-table thead th:first-child {
+  border-top-left-radius: 10px;
+}
+
+#lab-cie-table thead th:last-child {
+  border-top-right-radius: 10px;
+}
+
+#lab-cie-table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+#lab-cie-table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+#full-cie-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 75vw;
+  margin: auto;
+  margin-bottom: 1rem;
+  table-layout: auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#full-cie-table, 
+#full-cie-table th, 
+#full-cie-table td {
+  border: 1px solid #ccc;
+}
+
+#full-cie-table th, 
+#full-cie-table td {
+  padding: 10px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+#full-cie-table thead th {
+  background-color: #8bda8d;
+  color: #000;
+}
+
+#full-cie-table thead th:first-child {
+  border-top-left-radius: 10px;
+}
+
+#full-cie-table thead th:last-child {
+  border-top-right-radius: 10px;
+}
+
+#full-cie-table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+#full-cie-table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+/* Hide by default */
+.full-cie-table-section {
+  display: none;
+  margin-top: 2rem;
+}
+
+
+/* <---------------------Fees---------------------> */
+
+.fees {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.fees-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.fee-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.select-fee,
+.receipt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+    width: 25%;
+}
+
+.select-fee select,
+.receipt input {
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+#college-fee,
+#transport-fee,
+#hostel-fee {
+    display: none;
+}
+
+.fee-details {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.fee-details-left,
+.fee-details-right {
+    height: 47vh;
+    width: 50%;
+    margin: 1rem 0;
+}
+
+.fee-info {
+    background: #f8f9fa;
+    border-radius: 15px;
+    margin-top: 1rem;
+    padding: 10px;
+}
+
+.fee-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.fee-table th,
+.fee-table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.fee-table th {
+    background: #527a58;
+    color: white;
+}
+
+.status {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.status.paid {
+    color: green;
+}
+
+.status.unpaid {
+    color: red;
+}
+
+.fee-details-right {
+    display: none;
+    flex-direction: column;
+}
+
+.fee-head-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.fee-head-right select {
+    padding: 8px;
+    border-radius: 8px;
+}
+
+#upi {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    width: 50%;
+    height: 100%;
+}
+
+#upi img {
+    width: 85%;
+    object-fit: cover;
+    border-radius: 15px;
+    height: 28vh;
+}
+
+.payment-method {
+    max-width: 400px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#credit-card {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.total-amount-upi, .total-amount-credit{
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.willing-amount-credit{
+    display: flex;
+    margin: 1rem;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.willing-amount-upi{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#credit-willing-amount{
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 10px;
+    width: 25%;
+    text-align: center;
+}
+
+#upi-willing-amount{
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 10px;
+    text-align: center;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.input-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+.input-group input:focus {
+    border-color: #4CAF50;
+}
+
+.exp-cvv-flex {
+    display: flex;
+    gap: 10px;
+}
+
+.pay-btn {
+    width: 100%;
+    padding: 12px;
+    background: #FF6F61;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.pay-btn:hover {
+    background: #e65750;
+}
+
+.confirm-payments {
+    position: sticky;
+    width: 50%;
+    bottom: 0;
+    border-radius: 20px;
+    background: white;
+    padding: 15px 20px;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.total-fee,
+.to-pay {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.proceed-payment {
+    background: #818181;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: not-allowed;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* <---------------------Mobile---------------------> */
+
+@media (max-width: 700px) {
+    .head {
+        margin: 0px;
+    }
+
+    .nav-button {
+        margin: 0px;
+        display: flex;
+        gap: 1px;
+        align-items: center;
+    }
+
+    .sidebar {
+        display: none;
+        width: 800%;
+    }
+
+    #logo {
+        display: none;
+    }
+
+    #menu-icon {
+        display: flex !important;
+        margin-left: 10px;
+    }
+
+    /* <---------------------Fees---------------------> */
+
+    .fee-header {
+        flex-direction: column;
+    }
+
+    .select-fee,
+    .receipt {
+        width: 85%;
+    }
+
+    .fee-details {
+        flex-direction: column;
+    }
+
+    .fee-details-left {
+        width: 100%;
+        height: 45vh;
+    }
+
+    .fee-details-left {
+        transition: height 0.8s ease-in-out;
+    }
+
+    .fee-details-right {
+        width: 100%;
+        height: 53vh;
+    }
+
+    .confirm-payments {
+        width: 99%;
+        padding: 10px 10px;
+    }
+
+    #credit-card {
+        margin-top: 1.5rem;
+        width: 91%;
+    }
+
+    .exp-cvv-flex {
+        flex-direction: column;
+    }
+
+    /* <---------------------Assignment---------------------> */
+
+    .assignment-view{
+        padding: 0.5rem;
+        width: 100%;
+        margin: 0;
+    }
+
+    .assignment-item{
+        width: 87%;
+    }
+
+    .assignment-details{
+        width: 99%;
+        padding: 0;
+        margin: 0;
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    #assignment-info{
+        width: 91%;
+        padding: 2rem;
+        gap: 1.5rem;
+    }
+
+    .upload-section{
+        margin: 3rem;
+        width: 100%;
+    }
+
+    .submit-assignment{
+        width: 35%;
+    }
+
+    #file-name{
+        margin-top: 0;
+    }
+    
+    /* <---------------------Attendance---------------------> */
+
+    .subject-wise {
+        width: 97vw;
+    }
+
+    .subject-select{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .subject-select label{
+        font-weight: 600;
+    }
+    
+
+}
